@@ -1,0 +1,28 @@
+.mdl-layout-title, .mdl-layout__drawer-button, .mdl-navigation__link
+{
+  color: black !important;
+}
+
+.header-background
+{
+	background: url('') center / cover;
+}
+
+canvas
+{
+	display: block;
+}
+
+#intro
+{
+	height: 30% !important;
+}
+
+.fixed
+{
+	position: absolute;
+	top:20%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
