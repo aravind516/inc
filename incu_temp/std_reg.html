@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title></title>
+
+		<!-- Add to homescreen for Chrome on Android -->
+		<meta name="mobile-web-app-capable" content="yes">
+		<link ref="icon" sizes="192x192" href="images/android-desktop.png">
+
+		<!-- Add to homescreen for Safari on iOS -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-mobile-web-app-title" content="Material Design Lite">
+		<link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
+		
+		<link rel="shortcut icon" href="images/favicon.png">
+		
+		
+		<link rel="stylesheet" href="css/material.min.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+		<link rel="stylesheet" href="css/style.css">
+
+	</head>
+	<body>
+		<div class="mdl-layout mdl-js-layout">
+			<header class="header-background mdl-layout__header mdl-layout__header--transparent">
+				<div class="mdl-layout__header-row">
+					<span class="mdl-layout-title">The INC</span>
+					<div class="mdl-layout-spacer"></div>
+					<nav class="mdl-navigation">
+						<a class="mdl-navigation__link" href="#">Sign in</a>
+						<a class="mdl-navigation__link" href="#">About us</a>
+						<a class="mdl-navigation__link" href="#">Contact</a>
+					</nav>
+                </div>
+			</header>
+			<div class="mdl-layout__drawer">
+				<span class="mdl-layout-title">Title</span>
+				<nav class="mdl-navigation">
+					<a class="mdl-navigation__link" href="#">Sign in</a>
+					<a class="mdl-navigation__link" href="#">About </a>
+					<a class="mdl-navigation__link" href="#">Contact</a>
+				</nav>
+			</div>
+			<main class="mdl-layout__content">
+                
+                <div class="mdl-grid">
+    <div style="max-width:200px" class="mdl-layout-spacer"></div>
+    <div class="mdl-cell mdl-cell--6-col">
+        <form action="#">
+                    <div class="container">
+                        <center><h3>Student Application</h3></center><br/><hr>
+                    <div id="right2" class=" mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" pattern="[A-Z,a-z]*" id="name">
+                        <label class="mdl-textfield__label" for="name">FirstName...</label>
+                        <span class="mdl-textfield__error">Only alphabet and no spaces, please!</span>
+                    </div>
+                    <div id="right1" class=" mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" pattern="[A-Z,a-z]*" id="name">
+                        <label class="mdl-textfield__label" for="name">LastName...</label>
+                        <span class="mdl-textfield__error">Only alphabet and no spaces, please!</span>
+                    </div><br/>
+					</div>
+                    <div   class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="email" pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?" id="email" >
+                        <label class="mdl-textfield__label" for="email">Email...</label>
+                        <span class="mdl-textfield__error">Only valid email id, please!</span>
+                    </div><br/>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="password" pattern="^.{8,40}$" id="password">
+                        <label class="mdl-textfield__label" for="password">Password...</label>
+                        <span class="mdl-textfield__error">Please enter a valid password with 8 to 40 characters </span>
+                    </div><br/>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" onkeyup="validatep();" type="password"  id="repeatpwd">
+                        <label class="mdl-textfield__label" for="repeatpwd">Re-enter Password...</label>
+						<div id="perror"></div>
+						<!--<span class="mdl-textfield__error " id="perror">Password should match above password </span>-->
+                    </div>
+                        <br/><br/><br/>
+					<script>
+					function validatep(){
+					
+					var cp=document.getElementById('repeatpwd').value;
+					var p=document.getElementById('password').value;
+                    					
+					if(p!=cp) {
+					document.getElementById('repeatpwd').style.background="url('img/unchecked.gif') right no-repeat";
+					//document.getElementById('perror').innerHTML="<img src='img/unchecked.gif'>";
+					}else{
+					document.getElementById('repeatpwd').style.background="url('img/checked.gif') right no-repeat";
+					//document.getElementById('perror').innerHTML="<img src='img/checked.gif'>";
+					}
+					}
+					</script>
+                    <div>
+                        <h6>Gender : </h6>
+                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
+                        <input type="radio" id="option-1" class="mdl-radio__button" name="options" value="m" checked>
+                        <span class="mdl-radio__label">Male&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    </label>
+                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
+                        <input type="radio" id="option-2" class="mdl-radio__button" name="options" value="f">
+                        <span class="mdl-radio__label">Female</span>
+                    </label>
+                    </div>
+                    <br/><br/><br/>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" pattern="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$" id="phone">
+                        <label class="mdl-textfield__label" for="phone">Phone Number...</label>
+                        <span class="mdl-textfield__error">Please enter a valid phone number!</span>
+                    </div><br/>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" id="value-div">
+                        <textarea class="mdl-textfield__input" type="text" rows="3" id="address" ></textarea>
+						<label class="mdl-textfield__label" for="address">Address...</label>
+                    </div><br/>
+                    <div  id="right2"  class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" id="country">
+                        <label class="mdl-textfield__label" for="country">Country...</label>
+                    </div>
+                    <div  id="right1" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" pattern="^[1-9][0-9]{5}$" id="zipcode">
+                        <label class="mdl-textfield__label" for="zipcode">Pin Code...</label>
+                        <span class="mdl-textfield__error">Please enter a valid pin code!</span>
+                    </div><br/>
+                    <div>
+                        <h6>Occupation </h6>
+                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option1">
+                        <input type="radio" id="option1" class="mdl-radio__button" name="occupation" value="student" checked>
+                        <span class="mdl-radio__label">Student&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                        </label>
+                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option2">
+                        <input type="radio" id="option2" class="mdl-radio__button" name="occupation" value="working">
+                        <span class="mdl-radio__label">Working&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                        </label>
+                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option3">
+                        <input type="radio" id="option3" class="mdl-radio__button" name="occupation" value="unemployed">
+                        <span class="mdl-radio__label">Unemployed</span>
+                        </label>
+                    </div><br/>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" pattern="^((https?:\/\/)?((www|\w\w)\.)?linkedin\.com\/)((([\w]{2,3})?)|([^\/]+\/(([\w|\d-&#?=])+\/?){1,}))$" id="linkedin">
+                        <label class="mdl-textfield__label" for="linkedin">Linkedin url...</label>
+                        <span class="mdl-textfield__error">Only valid Linkedin url, please!</span>
+                    </div><br/>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="skills">
+                            <label class="mdl-textfield__label" for="skills">Skills...</label>
+                    </div><br/>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" id="interest">
+                        <label class="mdl-textfield__label" for="interest">Interested Areas...</label>
+                    </div><br/>
+                    
+                    <br/><br/><br/><br/>
+            <button type="submit" class="mdl-button mdl-js-button mdl-button--raised ">
+                                            Register
+                                        </button>
+                </form>           
+              
+        
+                   
+					</div>
+				
+					<div style="max-width:200px" class="mdl-layout-spacer"></div>
+                </div>
+                
+     			
+                
+
+				<footer class="mdl-mega-footer">
+					<div class="mdl-mega-footer__middle-section">
+						<div class="mdl-mega-footer__drop-down-section">
+							<input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+							<h1 class="mdl-mega-footer__heading">Features</h1>
+							<ul class="mdl-mega-footer__link-list">
+								<li><a href="#">About</a></li>
+								<li><a href="#">Terms</a></li>
+								<li><a href="#">Partners</a></li>
+								<li><a href="#">Updates</a></li>
+							</ul>
+						</div>
+
+						<div class="mdl-mega-footer__drop-down-section">
+							<input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+							<h1 class="mdl-mega-footer__heading">Details</h1>
+							<ul class="mdl-mega-footer__link-list">
+								<li><a href="#">Specs</a></li>
+								<li><a href="#">Tools</a></li>
+								<li><a href="#">Resources</a></li>
+							</ul>
+						</div>
+
+						<div class="mdl-mega-footer__drop-down-section">
+							<input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+							<h1 class="mdl-mega-footer__heading">Technology</h1>
+							<ul class="mdl-mega-footer__link-list">
+								<li><a href="#">How it works</a></li>
+								<li><a href="#">Patterns</a></li>
+								<li><a href="#">Usage</a></li>
+								<li><a href="#">Products</a></li>
+								<li><a href="#">Contracts</a></li>
+							</ul>
+						</div>
+
+						<div class="mdl-mega-footer__drop-down-section">
+							<input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+							<h1 class="mdl-mega-footer__heading">FAQ</h1>
+							<ul class="mdl-mega-footer__link-list">
+								<li><a href="#">Questions</a></li>
+								<li><a href="#">Answers</a></li>
+								<li><a href="#">Contact us</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="mdl-mega-footer__bottom-section">
+						<div class="mdl-logo">Title</div>
+						<ul class="mdl-mega-footer__link-list">
+							<li><a href="#">Help</a></li>
+							<li><a href="#">Privacy & Terms</a></li>
+						</ul>
+					</div>
+
+				</footer>
+			</main>
+		</div>
+
+		<script src="js/material.min.js"></script>
+		<script src="js/particles.min.js"></script>
+		<script src="js/package.js"></script>
+	</body>
+	</html>
