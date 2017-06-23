@@ -3,10 +3,7 @@
   color: black !important;
 }
 
-.header-background
-{
-	background: url('') center / cover;
-}
+
 
 canvas
 {
@@ -25,4 +22,74 @@ canvas
 	left: 50%;
 	transform: translate(-50%, -50%);
 	text-align: center;
+}
+
+
+
+
+#tab1{
+    margin-left: auto;
+    margin-right: auto; 
+    width: 70%;
+}
+
+.mdl-card {
+        
+    margin-left: auto;
+    margin-right: auto; 
+    width:30%;
+   
+      }
+
+.mdl-card__title{
+    background-color:#3D3D3D;
+    color:white;
+    opacity:0.9;
+}
+
+main{
+     background-color:#e9ebee;
+    background: 
+    linear-gradient(grey 0%, black 90%), 
+    linear-gradient(to right, #9fa1a3 0%, #353a3f 90%);
+  background-blend-mode: screen, difference, lighten;
+    color:black;
+    
+}
+
+div.mdl-cell{
+    background-color: white;
+    color:black;
+	padding: 25px 50px;
+	border-radius:25px;
+	max-width:700px;
+	margin: auto;
+    border-color: slategrey;
+    border-style: double;
+    border-width: 20px;
+}
+
+
+.mdl-textfield__input,
+.mdl-textfield__label,
+.mdl-checkbox{
+    font-size: 1.2em;
+   
+    
+}
+
+#right1{
+    float:right;width:280px;overflow:hidden;
+}
+
+#right2{
+    float:left;width:280px;
+}
+
+.mdl-button{
+    background-color:#3D3D3D;
+    color: white;
+}
+.mdl-textfield{
+    width:600px;
 }

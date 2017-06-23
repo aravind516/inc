@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title></title>
+
+		<!-- Add to homescreen for Chrome on Android -->
+		<meta name="mobile-web-app-capable" content="yes">
+		<link ref="icon" sizes="192x192" href="images/android-desktop.png">
+
+		<!-- Add to homescreen for Safari on iOS -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-mobile-web-app-title" content="Material Design Lite">
+		<link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
+		
+		<link rel="shortcut icon" href="images/favicon.png">
+		
+		
+		<link rel="stylesheet" href="css/material.min.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+		<link rel="stylesheet" href="css/style.css">
+
+	</head>
+	<body>
+		<div class="mdl-layout mdl-js-layout">
+			<header class="header-background mdl-layout__header mdl-layout__header--transparent">
+				<div class="mdl-layout__header-row">
+					<span class="mdl-layout-title">The INC</span>
+					<div class="mdl-layout-spacer"></div>
+					<nav class="mdl-navigation">
+						<a class="mdl-navigation__link" href="#">Sign in</a>
+						<a class="mdl-navigation__link" href="#">About us</a>
+						<a class="mdl-navigation__link" href="#">Contact</a>
+					</nav>
+                </div>
+			</header>
+			<div class="mdl-layout__drawer">
+				<span class="mdl-layout-title">Title</span>
+				<nav class="mdl-navigation">
+					<a class="mdl-navigation__link" href="#">Sign in</a>
+					<a class="mdl-navigation__link" href="#">About </a>
+					<a class="mdl-navigation__link" href="#">Contact</a>
+				</nav>
+			</div>
+			<main class="mdl-layout__content">
+                
+                <div class="mdl-grid">
+    <div style="max-width:200px" class="mdl-layout-spacer"></div>
+    <div class="mdl-cell mdl-cell--6-col">
+        <form action="#">
+                    <div class="container">
+                        <center><h3>Investor Application</h3></center><br/><hr>
+                    <div id="right2" class=" mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" pattern="[A-Z,a-z]*" id="name">
+                        <label class="mdl-textfield__label" for="name">FirstName...</label>
+                        <span class="mdl-textfield__error">Only alphabet and no spaces, please!</span>
+                    </div>
+                    <div id="right1" class=" mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" pattern="[A-Z,a-z]*" id="name">
+                        <label class="mdl-textfield__label" for="name">LastName...</label>
+                        <span class="mdl-textfield__error">Only alphabet and no spaces, please!</span>
+                    </div><br/>
+					</div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="email" pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?" id="email" >
+                        <label class="mdl-textfield__label" for="email">Email...</label>
+                        <span class="mdl-textfield__error">Only valid email id, please!</span>
+                    </div><br/>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="password" pattern="^.{8,40}$" id="password">
+                        <label class="mdl-textfield__label" for="password">Password...</label>
+                        <span class="mdl-textfield__error">Please enter a valid password with 8 to 40 characters </span>
+                    </div><br/>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" onkeyup="validatep();" type="password"  id="repeatpwd">
+                        <label class="mdl-textfield__label" for="repeatpwd">Re-enter Password...</label>
+						<div id="perror"></div>
+						<!--<span class="mdl-textfield__error " id="perror">Password should match above password </span>-->
+                    </div>
+                        <br/>
+					<script>
+					function validatep(){
+					
+					var cp=document.getElementById('repeatpwd').value;
+					var p=document.getElementById('password').value;
+                    					
+					if(p!=cp) {
+					document.getElementById('repeatpwd').style.background="url('img/unchecked.gif') right no-repeat";
+					//document.getElementById('perror').innerHTML="<img src='img/unchecked.gif'>";
+					}else{
+					document.getElementById('repeatpwd').style.background="url('img/checked.gif') right no-repeat";
+					//document.getElementById('perror').innerHTML="<img src='img/checked.gif'>";
+					}
+					}
+					</script>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" pattern="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$" id="phone">
+                        <label class="mdl-textfield__label" for="phone">Phone Number...</label>
+                        <span class="mdl-textfield__error">Please enter a valid phone number!</span>
+                    </div><br/>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" id="value-div">
+                        <textarea class="mdl-textfield__input" type="text" rows="3" id="address" ></textarea>
+						<label class="mdl-textfield__label" for="address">Address...</label>
+                    </div><br/>
+                    <div  id="right2"  class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" id="country">
+                        <label class="mdl-textfield__label" for="country">Country...</label>
+                    </div>
+                    <div  id="right1" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" pattern="^[1-9][0-9]{5}$" id="zipcode">
+                        <label class="mdl-textfield__label" for="zipcode">Pin Code...</label>
+                        <span class="mdl-textfield__error">Please enter a valid pin code!</span>
+                    </div><br/>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" pattern="^(http:\/\/|https:\/\/)?(www.)?([a-zA-Z0-9]+).[a-zA-Z0-9]*.[a-z]{3}.?([a-z]+)?$" id="website">
+                        <label class="mdl-textfield__label" for="website">website...</label>
+                        <span class="mdl-textfield__error">Only valid Website, please!</span>
+                    </div><br/>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" pattern="^((https?:\/\/)?((www|\w\w)\.)?linkedin\.com\/)((([\w]{2,3})?)|([^\/]+\/(([\w|\d-&#?=])+\/?){1,}))$" id="linkedin">
+                        <label class="mdl-textfield__label" for="linkedin">Linkedin url...</label>
+                        <span class="mdl-textfield__error">Only valid Linkedin url, please!</span>
+                    </div><br/>
+                    <h5>Interested sector of investing </h5> 
+                    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="check-1">
+                        <input type="checkbox" id="check-1" class="mdl-checkbox__input" checked>
+                        <span class="mdl-checkbox__label">Fintech</span>
+                    </label>
+                    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="check-2">
+                        <input type="checkbox" id="check-2" class="mdl-checkbox__input">
+                        <span class="mdl-checkbox__label">AgriTech</span>
+                    </label>
+                    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="check-3">
+                        <input type="checkbox" id="check-3" class="mdl-checkbox__input" >
+                        <span class="mdl-checkbox__label">Healthtech</span>
+                    </label>
+                    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="check-4">
+                        <input type="checkbox" id="check-4" class="mdl-checkbox__input">
+                        <span class="mdl-checkbox__label">Edtech</span>
+                    </label>
+                    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="check-5">
+                        <input type="checkbox" id="check-5" class="mdl-checkbox__input" >
+                        <span class="mdl-checkbox__label">Smart cities</span>
+                    </label>
+                    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="check-6">
+                        <input type="checkbox" id="check-6" class="mdl-checkbox__input">
+                        <span class="mdl-checkbox__label">transportation</span>
+                    </label>
+                    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="check-7">
+                        <input type="checkbox" id="check-7" class="mdl-checkbox__input" >
+                        <span class="mdl-checkbox__label">Social</span>
+                    </label>
+                    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="check-8">
+                        <input type="checkbox" id="check-8" class="mdl-checkbox__input">
+                        <span class="mdl-checkbox__label">sustainability</span>
+                    </label>
+                    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="check-9">
+                        <input type="checkbox" id="check-9" class="mdl-checkbox__input">
+                        <span class="mdl-checkbox__label">others</span>
+                    </label>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" id="others">
+                        <label class="mdl-textfield__label" for="name">if others Please Mention...</label>
+                    </div><br/>                   
+                    <h5>Choice of startup stage of investing</h5> 
+                    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
+                        <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" checked>
+                        <span class="mdl-checkbox__label">ideation</span>
+                    </label>
+                    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-2">
+                        <input type="checkbox" id="checkbox-2" class="mdl-checkbox__input">
+                        <span class="mdl-checkbox__label">prototype</span>
+                    </label>
+                    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-3">
+                        <input type="checkbox" id="checkbox-3" class="mdl-checkbox__input" >
+                        <span class="mdl-checkbox__label">angel_investment</span>
+                    </label>
+                    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-4">
+                        <input type="checkbox" id="checkbox-4" class="mdl-checkbox__input">
+                        <span class="mdl-checkbox__label">venture_capital</span>
+                    </label>
+                    <br/><br/><br/><br/>
+                                        <button type="submit" class="mdl-button mdl-js-button mdl-button--raised ">
+                                            Register
+                                        </button>
+                </form>           
+              
+        
+                   
+					</div>
+				
+					<div style="max-width:200px" class="mdl-layout-spacer"></div>
+                </div>
+                
+     			
+                
+
+				<footer class="mdl-mega-footer">
+					<div class="mdl-mega-footer__middle-section">
+						<div class="mdl-mega-footer__drop-down-section">
+							<input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+							<h1 class="mdl-mega-footer__heading">Features</h1>
+							<ul class="mdl-mega-footer__link-list">
+								<li><a href="#">About</a></li>
+								<li><a href="#">Terms</a></li>
+								<li><a href="#">Partners</a></li>
+								<li><a href="#">Updates</a></li>
+							</ul>
+						</div>
+
+						<div class="mdl-mega-footer__drop-down-section">
+							<input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+							<h1 class="mdl-mega-footer__heading">Details</h1>
+							<ul class="mdl-mega-footer__link-list">
+								<li><a href="#">Specs</a></li>
+								<li><a href="#">Tools</a></li>
+								<li><a href="#">Resources</a></li>
+							</ul>
+						</div>
+
+						<div class="mdl-mega-footer__drop-down-section">
+							<input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+							<h1 class="mdl-mega-footer__heading">Technology</h1>
+							<ul class="mdl-mega-footer__link-list">
+								<li><a href="#">How it works</a></li>
+								<li><a href="#">Patterns</a></li>
+								<li><a href="#">Usage</a></li>
+								<li><a href="#">Products</a></li>
+								<li><a href="#">Contracts</a></li>
+							</ul>
+						</div>
+
+						<div class="mdl-mega-footer__drop-down-section">
+							<input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+							<h1 class="mdl-mega-footer__heading">FAQ</h1>
+							<ul class="mdl-mega-footer__link-list">
+								<li><a href="#">Questions</a></li>
+								<li><a href="#">Answers</a></li>
+								<li><a href="#">Contact us</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="mdl-mega-footer__bottom-section">
+						<div class="mdl-logo">Title</div>
+						<ul class="mdl-mega-footer__link-list">
+							<li><a href="#">Help</a></li>
+							<li><a href="#">Privacy & Terms</a></li>
+						</ul>
+					</div>
+
+				</footer>
+			</main>
+		</div>
+
+		<script src="js/material.min.js"></script>
+		<script src="js/particles.min.js"></script>
+		<script src="js/package.js"></script>
+	</body>
+	</html>
