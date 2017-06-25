@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+	
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="description" content="">
@@ -53,77 +54,64 @@
                 <div class="mdl-grid">
     <div style="max-width:200px" class="mdl-layout-spacer"></div>
     <div class="mdl-cell mdl-cell--6-col">
-        <form action="#">
+        <form action="">
                     <div class="container">
                         <center><h3>Investor Application</h3></center><br/><hr>
-                    <div id="right2" class=" mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <!--<div id="right2" class=" mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                         <input class="mdl-textfield__input" type="text" pattern="[A-Z,a-z]*" id="name">
                         <label class="mdl-textfield__label" for="name">FirstName...</label>
                         <span class="mdl-textfield__error">Only alphabet and no spaces, please!</span>
-                    </div>
-                    <div id="right1" class=" mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <input class="mdl-textfield__input" type="text" pattern="[A-Z,a-z]*" id="name">
-                        <label class="mdl-textfield__label" for="name">LastName...</label>
-                        <span class="mdl-textfield__error">Only alphabet and no spaces, please!</span>
+                    </div>-->
+                    <div class=" mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" required maxlength="40" pattern="([A-Z,a-z, ]){8,30}$" id="name">
+                        <label class="mdl-textfield__label" for="name">Name...</label>
+                        <span class="mdl-textfield__error">Only alphabet and spaces with 8 to 30 characters!</span>
                     </div><br/>
 					</div>
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <input class="mdl-textfield__input" type="email" pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?" id="email" >
+                        <input class="mdl-textfield__input" type="email" required pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?" id="email" >
                         <label class="mdl-textfield__label" for="email">Email...</label>
                         <span class="mdl-textfield__error">Only valid email id, please!</span>
                     </div><br/>
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <input class="mdl-textfield__input" type="password" pattern="^.{8,40}$" id="password">
+                        <input class="mdl-textfield__input" type="password" required pattern="^.{8,40}$" id="password">
                         <label class="mdl-textfield__label" for="password">Password...</label>
                         <span class="mdl-textfield__error">Please enter a valid password with 8 to 40 characters </span>
                     </div><br/>
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <input class="mdl-textfield__input" onkeyup="validatep();" type="password"  id="repeatpwd">
+                        <input class="mdl-textfield__input" type="password" required  id="repeatpwd">
                         <label class="mdl-textfield__label" for="repeatpwd">Re-enter Password...</label>
 						<div id="perror"></div>
 						<!--<span class="mdl-textfield__error " id="perror">Password should match above password </span>-->
                     </div>
                         <br/>
-					<script>
-					function validatep(){
 					
-					var cp=document.getElementById('repeatpwd').value;
-					var p=document.getElementById('password').value;
-                    					
-					if(p!=cp) {
-					document.getElementById('repeatpwd').style.background="url('img/unchecked.gif') right no-repeat";
-					//document.getElementById('perror').innerHTML="<img src='img/unchecked.gif'>";
-					}else{
-					document.getElementById('repeatpwd').style.background="url('img/checked.gif') right no-repeat";
-					//document.getElementById('perror').innerHTML="<img src='img/checked.gif'>";
-					}
-					}
-					</script>
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <input class="mdl-textfield__input" type="text" pattern="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$" id="phone">
+                        <input class="mdl-textfield__input" type="text" required pattern="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$" id="phone">
                         <label class="mdl-textfield__label" for="phone">Phone Number...</label>
                         <span class="mdl-textfield__error">Please enter a valid phone number!</span>
                     </div><br/>
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" id="value-div">
-                        <textarea class="mdl-textfield__input" type="text" rows="3" id="address" ></textarea>
+                        <textarea class="mdl-textfield__input" type="text" required maxlength="100" rows="3" id="address" ></textarea>
 						<label class="mdl-textfield__label" for="address">Address...</label>
                     </div><br/>
                     <div  id="right2"  class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <input class="mdl-textfield__input" type="text" id="country">
+                        <input class="mdl-textfield__input" type="text" required maxlength="15" id="country">
                         <label class="mdl-textfield__label" for="country">Country...</label>
                     </div>
                     <div  id="right1" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <input class="mdl-textfield__input" type="text" pattern="^[1-9][0-9]{5}$" id="zipcode">
+                        <input class="mdl-textfield__input" type="text" required pattern="^[1-9][0-9]{5}$" id="zipcode">
                         <label class="mdl-textfield__label" for="zipcode">Pin Code...</label>
                         <span class="mdl-textfield__error">Please enter a valid pin code!</span>
                     </div><br/>
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <input class="mdl-textfield__input" type="text" pattern="^(http:\/\/|https:\/\/)?(www.)?([a-zA-Z0-9]+).[a-zA-Z0-9]*.[a-z]{3}.?([a-z]+)?$" id="website">
+                        <input class="mdl-textfield__input" type="text" pattern="^(https?:\/\/)?((www|\w\w)\.)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$" id="website">
                         <label class="mdl-textfield__label" for="website">website...</label>
                         <span class="mdl-textfield__error">Only valid Website, please!</span>
                     </div><br/>
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <input class="mdl-textfield__input" type="text" pattern="^((https?:\/\/)?((www|\w\w)\.)?linkedin\.com\/)((([\w]{2,3})?)|([^\/]+\/(([\w|\d-&#?=])+\/?){1,}))$" id="linkedin">
+                        <input class="mdl-textfield__input" type="text" pattern="^(https?:\/\/)?((www|\w\w)\.)?linkedin.com/((in/[^/]+/?)|(pub/[^/]+/((\w|\d)+/?){3}))$" id="linkedin">
+						
                         <label class="mdl-textfield__label" for="linkedin">Linkedin url...</label>
                         <span class="mdl-textfield__error">Only valid Linkedin url, please!</span>
                     </div><br/>
@@ -165,7 +153,7 @@
                         <span class="mdl-checkbox__label">others</span>
                     </label>
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <input class="mdl-textfield__input" type="text" id="others">
+                        <input class="mdl-textfield__input" type="text" maxlength="15" id="others">
                         <label class="mdl-textfield__label" for="name">if others Please Mention...</label>
                     </div><br/>                   
                     <h5>Choice of startup stage of investing</h5> 
@@ -186,10 +174,10 @@
                         <span class="mdl-checkbox__label">venture_capital</span>
                     </label><br/>
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <input class="mdl-textfield__input" type="text"  id="success_story">
+                        <input class="mdl-textfield__input" type="text" maxlength="60" id="success_story">
                         <label class="mdl-textfield__label" for="success_story">Success stories...</label>
                     </div><br/><div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <input class="mdl-textfield__input" type="text"  id="ticket">
+                        <input class="mdl-textfield__input" type="text" required id="ticket">
                         <label class="mdl-textfield__label" for="ticket">Ticket size...</label>
                     </div><br/><br/><br/><br/>
                     <div>
@@ -275,9 +263,28 @@
 				</footer>
 			</main>
 		</div>
-
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script src="js/validations.js"></script>
 		<script src="js/material.min.js"></script>
 		<script src="js/particles.min.js"></script>
 		<script src="js/package.js"></script>
+		
+		<script>
+		//Required input fields should not be marked invalid (red) automatically.
+		/**
+   * Check the validity state and update field accordingly.
+   *
+   * @public
+   */
+MaterialTextfield.prototype.checkValidity = function () {
+    if (this.input_.validity.valid) {
+        this.element_.classList.remove(this.CssClasses_.IS_INVALID);
+    } else {
+        if (this.element_.getElementsByTagName('input')[0].value.length > 0){
+              this.element_.classList.add(this.CssClasses_.IS_INVALID);
+        }
+    }
+};
+</script>
 	</body>
 	</html>

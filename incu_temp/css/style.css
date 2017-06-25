@@ -60,7 +60,7 @@ div.mdl-cell{
 	margin: auto;
     border-color: slategrey;
     border-style: double;
-    border-width: 20px;
+    border-width: 10px;
 }
 
 
@@ -73,7 +73,7 @@ div.mdl-cell{
 }
 
 #right1{
-    float:right;width:280px;overflow:hidden;
+    float:left;width:280px;overflow:hidden;
 }
 
 #right2{
