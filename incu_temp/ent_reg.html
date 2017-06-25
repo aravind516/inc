@@ -55,7 +55,7 @@
     <div class="mdl-cell mdl-cell--6-col">
         <form action="#">
                     <div class="container">
-                        <center><h3>Investor Application</h3></center><br/><hr>
+                        <center><h3>Entrepreneur Application</h3></center><br/><hr>
                     <div id="right2" class=" mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                         <input class="mdl-textfield__input" type="text" pattern="[A-Z,a-z]*" id="name">
                         <label class="mdl-textfield__label" for="name">FirstName...</label>
@@ -117,81 +117,31 @@
                         <label class="mdl-textfield__label" for="zipcode">Pin Code...</label>
                         <span class="mdl-textfield__error">Please enter a valid pin code!</span>
                     </div><br/>
-                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <input class="mdl-textfield__input" type="text" pattern="^(http:\/\/|https:\/\/)?(www.)?([a-zA-Z0-9]+).[a-zA-Z0-9]*.[a-z]{3}.?([a-z]+)?$" id="website">
-                        <label class="mdl-textfield__label" for="website">website...</label>
-                        <span class="mdl-textfield__error">Only valid Website, please!</span>
+                    <div>
+                        <h6>Stage of business  </h6>
+                        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="1">
+                        <input type="radio" id="1" class="mdl-radio__button" name="stage" value="1" checked>
+                        <span class="mdl-radio__label">ideation &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    </label>
+                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="2">
+                        <input type="radio" id="2" class="mdl-radio__button" name="stage" value="2">
+                        <span class="mdl-radio__label">prototype &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    </label>
+                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="3">
+                        <input type="radio" id="3" class="mdl-radio__button" name="stage" value="3">
+                        <span class="mdl-radio__label">angel investment &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    </label><br/><br/>
+                   <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="4">
+                        <input type="radio" id="4" class="mdl-radio__button" name="stage" value="4">
+                        <span class="mdl-radio__label">venture capital</span>
+                    </label>
                     </div><br/>
-                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <input class="mdl-textfield__input" type="text" pattern="^((https?:\/\/)?((www|\w\w)\.)?linkedin\.com\/)((([\w]{2,3})?)|([^\/]+\/(([\w|\d-&#?=])+\/?){1,}))$" id="linkedin">
-                        <label class="mdl-textfield__label" for="linkedin">Linkedin url...</label>
-                        <span class="mdl-textfield__error">Only valid Linkedin url, please!</span>
-                    </div><br/>
-                    <h5>Interested sector of investing </h5> 
-                    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="check-1">
-                        <input type="checkbox" id="check-1" class="mdl-checkbox__input" checked>
-                        <span class="mdl-checkbox__label">Fintech</span>
-                    </label>
-                    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="check-2">
-                        <input type="checkbox" id="check-2" class="mdl-checkbox__input">
-                        <span class="mdl-checkbox__label">AgriTech</span>
-                    </label>
-                    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="check-3">
-                        <input type="checkbox" id="check-3" class="mdl-checkbox__input" >
-                        <span class="mdl-checkbox__label">Healthtech</span>
-                    </label>
-                    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="check-4">
-                        <input type="checkbox" id="check-4" class="mdl-checkbox__input">
-                        <span class="mdl-checkbox__label">Edtech</span>
-                    </label>
-                    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="check-5">
-                        <input type="checkbox" id="check-5" class="mdl-checkbox__input" >
-                        <span class="mdl-checkbox__label">Smart cities</span>
-                    </label>
-                    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="check-6">
-                        <input type="checkbox" id="check-6" class="mdl-checkbox__input">
-                        <span class="mdl-checkbox__label">transportation</span>
-                    </label>
-                    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="check-7">
-                        <input type="checkbox" id="check-7" class="mdl-checkbox__input" >
-                        <span class="mdl-checkbox__label">Social</span>
-                    </label>
-                    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="check-8">
-                        <input type="checkbox" id="check-8" class="mdl-checkbox__input">
-                        <span class="mdl-checkbox__label">sustainability</span>
-                    </label>
-                    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="check-9">
-                        <input type="checkbox" id="check-9" class="mdl-checkbox__input">
-                        <span class="mdl-checkbox__label">others</span>
-                    </label>
-                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <input class="mdl-textfield__input" type="text" id="others">
-                        <label class="mdl-textfield__label" for="name">if others Please Mention...</label>
-                    </div><br/>                   
-                    <h5>Choice of startup stage of investing</h5> 
-                    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
-                        <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" checked>
-                        <span class="mdl-checkbox__label">ideation</span>
-                    </label>
-                    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-2">
-                        <input type="checkbox" id="checkbox-2" class="mdl-checkbox__input">
-                        <span class="mdl-checkbox__label">prototype</span>
-                    </label>
-                    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-3">
-                        <input type="checkbox" id="checkbox-3" class="mdl-checkbox__input" >
-                        <span class="mdl-checkbox__label">angel_investment</span>
-                    </label>
-                    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-4">
-                        <input type="checkbox" id="checkbox-4" class="mdl-checkbox__input">
-                        <span class="mdl-checkbox__label">venture_capital</span>
-                    </label><br/>
-                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <input class="mdl-textfield__input" type="text"  id="success_story">
-                        <label class="mdl-textfield__label" for="success_story">Success stories...</label>
-                    </div><br/><div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <input class="mdl-textfield__input" type="text"  id="ticket">
-                        <label class="mdl-textfield__label" for="ticket">Ticket size...</label>
-                    </div><br/><br/><br/><br/>
+                    <div   class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" id="choose">
+                        <label class="mdl-textfield__label" for="choose">Why do you choose us...</label>
+                    </div>        
+                    <br/><br/> <br/><br/>
+                   
                     <div>
                         <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="check1">
                         <input type="checkbox" id="check1" class="mdl-checkbox__input">
@@ -206,11 +156,7 @@
                                         <button type="submit" class="mdl-button mdl-js-button mdl-button--raised ">
                                             Register
                                         </button>
-                </form>           
-              
-        
-                   
-					</div>
+                </form> </div>
 				
 					<div style="max-width:200px" class="mdl-layout-spacer"></div>
                 </div>
