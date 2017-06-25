@@ -54,7 +54,7 @@
                 <div class="mdl-grid">
     <div style="max-width:200px" class="mdl-layout-spacer"></div>
     <div class="mdl-cell mdl-cell--6-col">
-        <form action="">
+        <form action="" onsubmit="return validate();">
                     <div class="container">
                         <center><h3>Investor Application</h3></center><br/><hr>
                     <!--<div id="right2" class=" mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
@@ -81,8 +81,7 @@
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                         <input class="mdl-textfield__input" type="password" required  id="repeatpwd">
                         <label class="mdl-textfield__label" for="repeatpwd">Re-enter Password...</label>
-						<div id="perror"></div>
-						<!--<span class="mdl-textfield__error " id="perror">Password should match above password </span>-->
+						<span class="mdl-textfield__error " id="perror">Password should match above password </span>
                     </div>
                         <br/>
 					
@@ -92,8 +91,8 @@
                         <span class="mdl-textfield__error">Please enter a valid phone number!</span>
                     </div><br/>
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" id="value-div">
-                        <textarea class="mdl-textfield__input" type="text" required maxlength="100" rows="3" id="address" ></textarea>
-						<label class="mdl-textfield__label" for="address">Address...</label>
+                        <input class="mdl-textfield__input" type="text" required maxlength="100" id="address" >
+						<label class="mdl-textfield__label" for="address">Address...</label>		
                     </div><br/>
                     <div  id="right2"  class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                         <input class="mdl-textfield__input" type="text" required maxlength="15" id="country">
@@ -117,39 +116,39 @@
                     </div><br/>
                     <h5>Interested sector of investing </h5> 
                     <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="check-1">
-                        <input type="checkbox" id="check-1" class="mdl-checkbox__input" checked>
+                        <input type="checkbox" id="check-1" class="sector mdl-checkbox__input" checked>
                         <span class="mdl-checkbox__label">Fintech</span>
                     </label>
                     <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="check-2">
-                        <input type="checkbox" id="check-2" class="mdl-checkbox__input">
+                        <input type="checkbox" id="check-2" class="sector mdl-checkbox__input">
                         <span class="mdl-checkbox__label">AgriTech</span>
                     </label>
                     <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="check-3">
-                        <input type="checkbox" id="check-3" class="mdl-checkbox__input" >
+                        <input type="checkbox" id="check-3" class="sector mdl-checkbox__input" >
                         <span class="mdl-checkbox__label">Healthtech</span>
                     </label>
                     <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="check-4">
-                        <input type="checkbox" id="check-4" class="mdl-checkbox__input">
+                        <input type="checkbox" id="check-4" class="sector mdl-checkbox__input">
                         <span class="mdl-checkbox__label">Edtech</span>
                     </label>
                     <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="check-5">
-                        <input type="checkbox" id="check-5" class="mdl-checkbox__input" >
+                        <input type="checkbox" id="check-5" class="sector mdl-checkbox__input" >
                         <span class="mdl-checkbox__label">Smart cities</span>
                     </label>
                     <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="check-6">
-                        <input type="checkbox" id="check-6" class="mdl-checkbox__input">
+                        <input type="checkbox" id="check-6" class="sector mdl-checkbox__input">
                         <span class="mdl-checkbox__label">transportation</span>
                     </label>
                     <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="check-7">
-                        <input type="checkbox" id="check-7" class="mdl-checkbox__input" >
+                        <input type="checkbox" id="check-7" class="sector mdl-checkbox__input" >
                         <span class="mdl-checkbox__label">Social</span>
                     </label>
                     <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="check-8">
-                        <input type="checkbox" id="check-8" class="mdl-checkbox__input">
+                        <input type="checkbox" id="check-8" class="sector mdl-checkbox__input">
                         <span class="mdl-checkbox__label">sustainability</span>
                     </label>
                     <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="check-9">
-                        <input type="checkbox" id="check-9" class="mdl-checkbox__input">
+                        <input type="checkbox" id="check-9" onclick="makeothersreq()" class="sector mdl-checkbox__input">
                         <span class="mdl-checkbox__label">others</span>
                     </label>
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
@@ -158,19 +157,19 @@
                     </div><br/>                   
                     <h5>Choice of startup stage of investing</h5> 
                     <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
-                        <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" checked>
+                        <input type="checkbox"  name="business_stage" id="checkbox-1" class="stage mdl-checkbox__input" checked>
                         <span class="mdl-checkbox__label">ideation</span>
                     </label>
                     <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-2">
-                        <input type="checkbox" id="checkbox-2" class="mdl-checkbox__input">
+                        <input type="checkbox"  name="business_stage" id="checkbox-2" class="stage mdl-checkbox__input">
                         <span class="mdl-checkbox__label">prototype</span>
                     </label>
                     <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-3">
-                        <input type="checkbox" id="checkbox-3" class="mdl-checkbox__input" >
+                        <input type="checkbox"  name="business_stage" id="checkbox-3" class="stage mdl-checkbox__input" >
                         <span class="mdl-checkbox__label">angel_investment</span>
                     </label>
                     <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-4">
-                        <input type="checkbox" id="checkbox-4" class="mdl-checkbox__input">
+                        <input type="checkbox"  name="business_stage" id="checkbox-4" class="stage mdl-checkbox__input">
                         <span class="mdl-checkbox__label">venture_capital</span>
                     </label><br/>
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
@@ -182,11 +181,11 @@
                     </div><br/><br/><br/><br/>
                     <div>
                         <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="check1">
-                        <input type="checkbox" id="check1" class="mdl-checkbox__input">
+                        <input type="checkbox" required id="check1" class="mdl-checkbox__input">
                         <span class="mdl-checkbox__label">I agree with terms and conditions.</span>
                         </label>
                         <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="check2">
-                        <input type="checkbox" id="check2" class="mdl-checkbox__input">
+                        <input type="checkbox" required id="check2" class="mdl-checkbox__input">
                         <span class="mdl-checkbox__label">I here by inform that the above given information is true and accurate I undertake that all information provided by me is accurate and I am willing to provide KYC information when requested.</span>
                         </label>
                     </div>
@@ -285,6 +284,7 @@ MaterialTextfield.prototype.checkValidity = function () {
         }
     }
 };
+
 </script>
 	</body>
 	</html>

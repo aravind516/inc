@@ -4,6 +4,7 @@
 //password validation
 $(document).ready(function () {
    $("#password, #repeatpwd").keyup(checkPasswordMatch);
+   
 });
    function checkPasswordMatch(){
 var password = $("#password").val();
@@ -24,4 +25,24 @@ else if(password != confirmPassword){
 
 					}
 }
-					
+
+
+//select at least one checkbox of sector and stage
+function validate(){
+
+   if($(".sector:checkbox:checked").length == 0){
+	   		  
+		alert("please select at least one sector to invest");
+
+       return false;
+   } else if($(".stage:checkbox:checked").length == 0){
+		alert("please select at least one stage of startup to invest");
+
+       return false;
+   }else {
+   
+       return true;
+   }
+
+}
+		
