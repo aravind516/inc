@@ -51,7 +51,7 @@ main{
     
 }
 
-div.mdl-cell{
+#form{
     background-color: white;
     color:black;
 	padding: 25px 50px;

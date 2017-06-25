@@ -53,7 +53,7 @@
                 
                 <div class="mdl-grid">
     <div style="max-width:200px" class="mdl-layout-spacer"></div>
-    <div class="mdl-cell mdl-cell--6-col">
+    <div class="mdl-cell mdl-cell--6-col" id="form">
         <form action="" onsubmit="return validate();">
                     <div class="container">
                         <center><h3>Investor Application</h3></center><br/><hr>
@@ -175,10 +175,28 @@
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                         <input class="mdl-textfield__input" type="text" maxlength="60" id="success_story">
                         <label class="mdl-textfield__label" for="success_story">Success stories...</label>
-                    </div><br/><div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                   </div><br/>
+				   <!--<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                         <input class="mdl-textfield__input" type="text" required id="ticket">
                         <label class="mdl-textfield__label" for="ticket">Ticket size...</label>
-                    </div><br/><br/><br/><br/>
+                    </div>-->                    <h5>Ticket size...</h5> 
+
+					<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
+  <input type="radio" id="option-1" class="mdl-radio__button" name="ticket" value="1" checked >
+  <span class="mdl-radio__label">10k-100k</span>
+</label><br>
+<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
+  <input type="radio" id="option-2" class="mdl-radio__button" name="ticket" value="2">
+  <span class="mdl-radio__label">100k-1000k</span>
+  
+</label><br>
+<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-3">
+  <input type="radio" id="option-3" class="mdl-radio__button" name="ticket" value="3">
+  <span class="mdl-radio__label">above 1000k</span>
+</label>
+<br/><br/><br/>
+<div class="g-recaptcha" data-sitekey="6LdTUSQUAAAAAHuoeprBUClrAHzDfzU5Co6ctO44"></div>
+<br/><br/>
                     <div>
                         <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="check1">
                         <input type="checkbox" required id="check1" class="mdl-checkbox__input">
@@ -189,7 +207,7 @@
                         <span class="mdl-checkbox__label">I here by inform that the above given information is true and accurate I undertake that all information provided by me is accurate and I am willing to provide KYC information when requested.</span>
                         </label>
                     </div>
-                    <br/><br/><br/><br/><br/><br/>
+                    <br/><br/><br/><br/>
                                         <button type="submit" class="mdl-button mdl-js-button mdl-button--raised ">
                                             Register
                                         </button>
@@ -267,7 +285,8 @@
 		<script src="js/material.min.js"></script>
 		<script src="js/particles.min.js"></script>
 		<script src="js/package.js"></script>
-		
+		<script src='https://www.google.com/recaptcha/api.js'></script>
+
 		<script>
 		//Required input fields should not be marked invalid (red) automatically.
 		/**
