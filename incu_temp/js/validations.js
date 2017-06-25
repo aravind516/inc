@@ -26,6 +26,23 @@ else if(password != confirmPassword){
 					}
 }
 
+//if others is selected make text field required
+function makeothersreq(){
+	
+if($("#check-9").is(':checked')){
+		  
+		  $("#others").attr('required',true);
+	  }
+	  else
+		  $("#others").prop('required',false);
+		  $("#others").attr('value',"");
+	  
+	  
+
+	
+	
+}
+
 
 //select at least one checkbox of sector and stage
 function validate(){
