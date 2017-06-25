@@ -63,18 +63,18 @@
                         <span class="mdl-textfield__error">Only alphabet and no spaces, please!</span>
                     </div>-->
                     <div class=" mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <input class="mdl-textfield__input" type="text" required maxlength="40" pattern="([A-Z,a-z, ]){8,30}$" id="name">
+                        <input class="mdl-textfield__input" type="text" required maxlength="40" pattern="([A-Z,a-z, ]){8,30}$" name="name" id="name">
                         <label class="mdl-textfield__label" for="name">Name...</label>
                         <span class="mdl-textfield__error">Only alphabet and spaces with 8 to 30 characters!</span>
                     </div><br/>
 					</div>
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <input class="mdl-textfield__input" type="email" required pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?" id="email" >
+                        <input class="mdl-textfield__input" type="email" required pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?" name="email" id="email" >
                         <label class="mdl-textfield__label" for="email">Email...</label>
                         <span class="mdl-textfield__error">Only valid email id, please!</span>
                     </div><br/>
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <input class="mdl-textfield__input" type="password" required pattern="^.{8,40}$" id="password">
+                        <input class="mdl-textfield__input" type="password" required pattern="^.{8,40}$" name="password" id="password">
                         <label class="mdl-textfield__label" for="password">Password...</label>
                         <span class="mdl-textfield__error">Please enter a valid password with 8 to 40 characters </span>
                     </div><br/>
@@ -86,73 +86,73 @@
                         <br/>
 					
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <input class="mdl-textfield__input" type="text" required pattern="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$" id="phone">
+                        <input class="mdl-textfield__input" type="text" required pattern="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$" name="phone" id="phone">
                         <label class="mdl-textfield__label" for="phone">Phone Number...</label>
                         <span class="mdl-textfield__error">Please enter a valid phone number!</span>
                     </div><br/>
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" id="value-div">
-                        <input class="mdl-textfield__input" type="text" required maxlength="100" id="address" >
+                        <input class="mdl-textfield__input" type="text" required maxlength="100" name="address" id="address" >
 						<label class="mdl-textfield__label" for="address">Address...</label>		
                     </div><br/>
                     <div  id="right2"  class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <input class="mdl-textfield__input" type="text" required maxlength="15" id="country">
+                        <input class="mdl-textfield__input" type="text" required maxlength="15" name="country" id="country">
                         <label class="mdl-textfield__label" for="country">Country...</label>
                     </div>
                     <div  id="right1" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <input class="mdl-textfield__input" type="text" required pattern="^[1-9][0-9]{5}$" id="zipcode">
+                        <input class="mdl-textfield__input" type="text" required pattern="^[1-9][0-9]{5}$" name="zipcode" id="zipcode">
                         <label class="mdl-textfield__label" for="zipcode">Pin Code...</label>
                         <span class="mdl-textfield__error">Please enter a valid pin code!</span>
                     </div><br/>
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <input class="mdl-textfield__input" type="text" pattern="^(https?:\/\/)?((www|\w\w)\.)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$" id="website">
+                        <input class="mdl-textfield__input" type="text" pattern="^(https?:\/\/)?((www|\w\w)\.)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$" name="website" id="website">
                         <label class="mdl-textfield__label" for="website">website...</label>
                         <span class="mdl-textfield__error">Only valid Website, please!</span>
                     </div><br/>
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <input class="mdl-textfield__input" type="text" pattern="^(https?:\/\/)?((www|\w\w)\.)?linkedin.com/((in/[^/]+/?)|(pub/[^/]+/((\w|\d)+/?){3}))$" id="linkedin">
+                        <input class="mdl-textfield__input" type="text" pattern="^(https?:\/\/)?((www|\w\w)\.)?linkedin.com/((in/[^/]+/?)|(pub/[^/]+/((\w|\d)+/?){3}))$" name="linkedin_url" id="linkedin">
 						
                         <label class="mdl-textfield__label" for="linkedin">Linkedin url...</label>
                         <span class="mdl-textfield__error">Only valid Linkedin url, please!</span>
                     </div><br/>
                     <h5>Interested sector of investing </h5> 
                     <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="check-1">
-                        <input type="checkbox" id="check-1" class="sector mdl-checkbox__input" checked>
+                        <input type="checkbox" id="check-1" name="sectors" class="sector mdl-checkbox__input" checked>
                         <span class="mdl-checkbox__label">Fintech</span>
                     </label>
                     <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="check-2">
-                        <input type="checkbox" id="check-2" class="sector mdl-checkbox__input">
+                        <input type="checkbox" id="check-2" name="sectors" class="sector mdl-checkbox__input">
                         <span class="mdl-checkbox__label">AgriTech</span>
                     </label>
                     <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="check-3">
-                        <input type="checkbox" id="check-3" class="sector mdl-checkbox__input" >
+                        <input type="checkbox" id="check-3" name="sectors" class="sector mdl-checkbox__input" >
                         <span class="mdl-checkbox__label">Healthtech</span>
                     </label>
                     <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="check-4">
-                        <input type="checkbox" id="check-4" class="sector mdl-checkbox__input">
+                        <input type="checkbox" id="check-4" name="sectors" class="sector mdl-checkbox__input">
                         <span class="mdl-checkbox__label">Edtech</span>
                     </label>
                     <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="check-5">
-                        <input type="checkbox" id="check-5" class="sector mdl-checkbox__input" >
+                        <input type="checkbox" id="check-5" name="sectors" class="sector mdl-checkbox__input" >
                         <span class="mdl-checkbox__label">Smart cities</span>
                     </label>
                     <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="check-6">
-                        <input type="checkbox" id="check-6" class="sector mdl-checkbox__input">
+                        <input type="checkbox" id="check-6" name="sectors" class="sector mdl-checkbox__input">
                         <span class="mdl-checkbox__label">transportation</span>
                     </label>
                     <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="check-7">
-                        <input type="checkbox" id="check-7" class="sector mdl-checkbox__input" >
+                        <input type="checkbox" id="check-7" name="sectors" class="sector mdl-checkbox__input" >
                         <span class="mdl-checkbox__label">Social</span>
                     </label>
                     <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="check-8">
-                        <input type="checkbox" id="check-8" class="sector mdl-checkbox__input">
+                        <input type="checkbox" id="check-8" name="sectors" class="sector mdl-checkbox__input">
                         <span class="mdl-checkbox__label">sustainability</span>
                     </label>
                     <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="check-9">
-                        <input type="checkbox" id="check-9" onclick="makeothersreq()" class="sector mdl-checkbox__input">
+                        <input type="checkbox" id="check-9" name="sectors" onclick="makeothersreq()" class="sector mdl-checkbox__input">
                         <span class="mdl-checkbox__label">others</span>
                     </label>
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <input class="mdl-textfield__input" type="text" maxlength="15" id="others">
+                        <input class="mdl-textfield__input" name="other_sectors" type="text" maxlength="15" id="others">
                         <label class="mdl-textfield__label" for="name">if others Please Mention...</label>
                     </div><br/>                   
                     <h5>Choice of startup stage of investing</h5> 
@@ -173,7 +173,7 @@
                         <span class="mdl-checkbox__label">venture_capital</span>
                     </label><br/>
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <input class="mdl-textfield__input" type="text" maxlength="60" id="success_story">
+                        <input class="mdl-textfield__input" type="text" maxlength="60" name="success_stroy" id="success_story">
                         <label class="mdl-textfield__label" for="success_story">Success stories...</label>
                    </div><br/>
 				   <!--<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
@@ -182,16 +182,16 @@
                     </div>-->                    <h5>Ticket size...</h5> 
 
 					<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
-  <input type="radio" id="option-1" class="mdl-radio__button" name="ticket" value="1" checked >
+  <input type="radio" id="option-1" class="mdl-radio__button" name="ticket_size" value="1" checked >
   <span class="mdl-radio__label">10k-100k</span>
 </label><br>
 <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
-  <input type="radio" id="option-2" class="mdl-radio__button" name="ticket" value="2">
+  <input type="radio" id="option-2" class="mdl-radio__button" name="ticket_size" value="2">
   <span class="mdl-radio__label">100k-1000k</span>
   
 </label><br>
 <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-3">
-  <input type="radio" id="option-3" class="mdl-radio__button" name="ticket" value="3">
+  <input type="radio" id="option-3" class="mdl-radio__button" name="ticket_size" value="3">
   <span class="mdl-radio__label">above 1000k</span>
 </label>
 <br/><br/><br/>
